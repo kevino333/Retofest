@@ -1,0 +1,99 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Cambria;
+}
+
+
+
+/*Estilo navbar*/
+.navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: title;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.navbar div h1,
+li a {
+    font-family: title;
+    background: linear-gradient(yellow, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+.options {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navbar li {
+    margin: 10px;
+    list-style: none;
+}
+.navbar li a:hover {
+    background: linear-gradient(red, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/*Contenido*/
+.content {
+    margin-top:90px;
+    padding: 16px;
+}
+
+/*Cartel de los grupos*/
+.cartel a img{
+    width: 100%;
+}
+.cartel a img:last-child{
+    display: none;
+}
+.fechas{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+.fechas span{
+    background: linear-gradient(yellow, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/*Fuentes*/
+@font-face {
+    font-family: title;
+    src: url(../font/Curse\ of\ the\ Zombie.ttf);
+}
+
+
+/* Media query*/
+@media screen and (max-width:600px) {
+    .navbar{
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cartel a img:first-child{
+        display: none;
+    }
+    .cartel a img:last-child {
+        display: unset;
+    }
+    .fechas{
+        flex-direction: column;
+    }
+}
